@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kháng chiến chống Mỹ (1954 - 1975)</title>
+    <style>
+        /* Thiết lập chung và Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f1ea; /* Màu nền giấy cổ điển */
+        }
+
+        /* Phần đầu trang (Header) */
+        header {
+            background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(178, 34, 34, 0.85)), 
+                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1200px-Flag_of_Vietnam.svg.png') center/cover;
+            color: #ffd700; /* Màu vàng sao */
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #ffd700;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #fff;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* Thanh điều hướng (Navigation) */
+        nav {
+            background-color: #8b0000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffd700;
+            color: #8b0000;
+        }
+
+        /* Bố cục nội dung chính (Container & Grid) */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 25px;
+        }
+
+        /* Khối nội dung bên trái */
+        main section {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid #b22222;
+        }
+
+        h2 {
+            color: #8b0000;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        h3 {
+            color: #b22222;
+            margin: 15px 0 8px 0;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Hình ảnh minh họa */
+        figure {
+            margin: 20px 0;
+            text-align: center;
+            background: #fafafa;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* Bảng thống kê (Table) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #8b0000;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Danh sách (List) */
+        ul.content-list {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        ul.content-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Thanh bên (Sidebar / Aside) */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .widget {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #ffd700;
+        }
+
+        .widget h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        blockquote {
+            background: #fff8dc;
+            border-left: 4px solid #daa520;
+            padding: 12px;
+            font-style: italic;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Biểu mẫu (Form) */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        button {
+            background-color: #8b0000;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #b22222;
+        }
+
+        /* Chân trang (Footer) */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 30px;
+            border-top: 4px solid #8b0000;
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        /* Responsive cho màn hình điện thoại */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phần đầu trang -->
+    <header>
+        <h1>Kháng Chiến Chống Mỹ</h1>
+        <p>Trang sử vàng chói lọi của dân tộc Việt Nam (1954 – 1975)</p>
+    </header>
+
+    <!-- Thanh điều hướng -->
+    <nav>
+        <ul>
+            <li><a href="#boi-canh">Bối cảnh lịch sử</a></li>
+            <li><a href="#giai-doan">Các giai đoạn chính</a></li>
+            <li><a href="#chien-thang">Chiến thắng tiêu biểu</a></li>
+            <li><a href="#y-nghia">Ý nghĩa lịch sử</a></li>
+            <li><a href="#tuong-tac">Góc học tập</a></li>
+        </ul>
+    </nav>
+
+    <!-- Khu vực nội dung chính -->
+    <div class="container">
+        <!-- Cột nội dung chính -->
+        <main>
+            <!-- Mục 1: Bối cảnh -->
+            <section id="boi-canh">
+                <h2>1. Bối cảnh lịch sử sau năm 1954</h2>
+                <p>Sau thắng lợi của cuộc kháng chiến chống thực dân Pháp và Hiệp định Giơ-ne-vơ được ký kết (7/1954), đất nước Việt Nam tạm thời bị chia cắt làm hai miền lấy vĩ tuyến 17 (sông Bến Hải) làm ranh giới quân sự tạm thời.</p>
+                <p>Miền Bắc được hoàn toàn giải phóng, bước vào thời kỳ quá độ lên chủ nghĩa xã hội. Trong khi đó, ở miền Nam, đế quốc Mỹ hất cẳng Pháp, dựng lên chính quyền tay sai Ngô Đình Diệm, âm mưu chia cắt lâu dài Việt Nam, biến miền Nam thành thuộc địa kiểu mới và căn cứ quân sự của Mỹ ở Đông Nam Á.</p>
+                
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Hien_Luong_Bridge_2011.jpg/800px-Hien_Luong_Bridge_2011.jpg" alt="Cầu Hiền Lương - Sông Bến Hải">
+                    <figcaption>Cầu Hiền Lương bắc qua sông Bến Hải (vĩ tuyến 17) – Nơi chứng kiến nỗi đau chia cắt hai miền Nam - Bắc suốt 21 năm.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Mục 2: Các giai đoạn chính -->
+            <section id="giai-doan">
+                <h2>2. Các giai đoạn chiến lược của cuộc kháng chiến</h2>
+                <p>Cuộc kháng chiến chống Mỹ, cứu nước của nhân dân ta trải qua 5 giai đoạn chiến lược lớn, lần lượt đánh bại các chiến lược chiến tranh của đế quốc Mỹ:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Giai đoạn</th>
+                            <th>Chiến lược của Mỹ</th>
+                            <th>Thắng lợi tiêu biểu của ta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1954 – 1960</strong></td>
+                            <td>Chiến tranh đơn phương (Tố cộng, diệt cộng)</td>
+                            <td>Phong trào "Đồng khởi" (1959 – 1960) ở Bến Tre và khắp miền Nam.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1961 – 1965</strong></td>
+                            <td>Chiến tranh đặc biệt</td>
+                            <td>Chiến thắng Ấp Bắc (1963), Bình Giã, Ba Gia, Đồng Xoài.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1965 – 1968</strong></td>
+                            <td>Chiến tranh cục bộ (Đưa quân Mỹ vào trực tiếp tham chiến)</td>
+                            <td>Chiến thắng Vạn Tường (1965), hai mùa khô (1965-1967), Tổng tiến công và nổi dậy Tết Mậu Thân 1968.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1969 – 1973</strong></td>
+                            <td>Việt Nam hóa chiến tranh</td>
+                            <td>Cuộc Tiến công chiến lược năm 1972; Trận "Điện Biên Phủ trên không" (12/1972) buộc Mỹ ký Hiệp định Pa-ri (1/1973).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1973 – 1975</strong></td>
+                            <td>Tiếp tục "Việt Nam hóa chiến tranh"</td>
+                            <td>Tổng tiến công và nổi dậy Xuân 1975 với đỉnh cao là Chiến dịch Hồ Chí Minh lịch sử (30/4/1975).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Mục 3: Những chiến thắng tiêu biểu -->
+            <section id="chien-thang">
+                <h2>3. Những mốc son chói lọi</h2>
+                
+                <article>
+                    <h3>Phong trào Đồng khởi (1959 - 1960)</h3>
+                    <p>Dưới ánh sáng Nghị quyết 15 của Trung ương Đảng, nhân dân miền Nam vùng lên phá thế kìm kẹp. Tiêu biểu là cuộc Đồng khởi ở Mỏ Cày (Bến Tre) do đồng chí Nguyễn Thị Định lãnh đạo, mở ra bước ngoặt đưa cách mạng miền Nam từ thế giữ gìn lực lượng sang thế tiến công.</p>
+                </article>
+
+                <article>
+                    <h3>Chiến thắng "Điện Biên Phủ trên không" (12/1972)</h3>
+                    <p>Trong 12 ngày đêm cuối năm 1972 (từ 18 đến 29/12), quân và dân miền Bắc đã đập tan cuộc tập kích chiến lược đường không bằng máy bay B-52 của Mỹ vào Hà Nội và Hải Phòng, bắn rơi 81 máy bay các loại, buộc Mỹ phải ký Hiệp định Pa-ri về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam.</p>
+                </article>
+
+                <article>
+                    <h3>Đại thắng mùa Xuân năm 1975</h3>
+                    <p>Trải qua 3 chiến dịch lớn liên tiếp: Chiến dịch Tây Nguyên, Chiến dịch Huế - Đà Nẵng và kết thúc bằng Chiến dịch Hồ Chí Minh lịch sử. Đúng 11 giờ 30 phút ngày 30/4/1975, lá cờ cách mạng tung bay trên nóc Dinh Độc Lập, giải phóng hoàn toàn miền Nam, thống nhất đất nước.</p>
+                    
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/North_Vietnamese_tank_enters_Saigon_1975.jpg/800px-North_Vietnamese_tank_enters_Saigon_1975.jpg" alt="Xe tăng tiến vào Dinh Độc Lập">
+                        <figcaption>Xe tăng Quân giải phóng tiến vào Dinh Độc Lập trưa ngày 30/4/1975.</figcaption>
+                    </figure>
+                </article>
+            </section>
+
+            <!-- Mục 4: Ý nghĩa lịch sử -->
+            <section id="y-nghia">
+                <h2>4. Ý nghĩa lịch sử và nguyên nhân thắng lợi</h2>
+                <ul class="content-list">
+                    <li><strong>Đối với dân tộc:</strong> Kết thúc 21 năm chiến đấu chống Mỹ và 30 năm chiến tranh giải phóng dân tộc (1945 – 1975), chấm dứt vĩnh viễn ách thống trị của chủ nghĩa đế quốc, hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân trên cả nước, mở ra kỷ nguyên mới: kỷ nguyên độc lập, thống nhất, đi lên chủ nghĩa xã hội.</li>
+                    <li><strong>Đối với quốc tế:</strong> Giáng một đòn mạnh mẽ vào âm mưu nô dịch của chủ nghĩa đế quốc, cổ vũ to lớn phong trào giải phóng dân tộc và phong trào đấu tranh vì hòa bình, dân chủ trên toàn thế giới.</li>
+                </ul>
+            </section>
+
+            <!-- Mục 5: Góc tương tác học sinh -->
+            <section id="tuong-tac">
+                <h2>5. Góc học tập & Cảm nhận lịch sử</h2>
+                <p>Hãy để lại cảm nhận của bạn hoặc đặt câu hỏi ôn tập về giai đoạn lịch sử hào hùng này:</p>
+                
+                <form onsubmit="xuLyGuiBai(event)">
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên học sinh:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn A - Lớp 12A1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic">Chủ đề bạn quan tâm nhất:</label>
+                        <select id="topic" name="topic">
+                            <option value="dong-khoi">Phong trào Đồng khởi (1960)</option>
+                            <option value="mau-than">Tổng tiến công Tết Mậu Thân (1968)</option>
+                            <option value="dbp-tren-khong">Điện Biên Phủ trên không (1972)</option>
+                            <option value="xuan-1975">Đại thắng mùa Xuân 1975</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Cảm nhận hoặc câu hỏi thảo luận:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Nhập nội dung của bạn tại đây..." required></textarea>
+                    </div>
+
+                    <button type="submit">Gửi bài thảo luận</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Cột phụ bên phải (Sidebar) -->
+        <aside>
+            <div class="widget">
+                <h3>Lời Bác dạy</h3>
+                <blockquote>
+                    "Chiến tranh có thể kéo dài 5 năm, 10 năm, 20 năm hoặc lâu hơn nữa. Hà Nội, Hải Phòng và một số thành phố, xí nghiệp có thể bị tàn phá, song nhân dân Việt Nam quyết không sợ! Không có gì quý hơn độc lập, tự do!"
+                    <br><strong>— Chủ tịch Hồ Chí Minh (17/7/1966)</strong>
+                </blockquote>
+            </div>
+
+            <div class="widget">
+                <h3>Nhân vật lịch sử tiêu biểu</h3>
+                <ul class="content-list">
+                    <li><strong>Chủ tịch Hồ Chí Minh:</strong> Lãnh tụ tối cao vạch ra đường lối kháng chiến.</li>
+                    <li><strong>Đại tướng Võ Nguyên Giáp:</strong> Tổng Tư lệnh Quân đội nhân dân Việt Nam.</li>
+                    <li><strong>Đại tướng Văn Tiến Dũng:</strong> Tư lệnh Chiến dịch Hồ Chí Minh.</li>
+                    <li><strong>Nữ tướng Nguyễn Thị Định:</strong> Phó Tư lệnh Quân giải phóng miền Nam.</li>
+                    <li><strong>Anh hùng Nguyễn Văn Trỗi:</strong> Tấm gương bất khuất của tuổi trẻ Sài Gòn.</li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Con số ấn tượng</h3>
+                <p><strong>21 năm:</strong> Thời gian trường kỳ kháng chiến (1954 – 1975).</p>
+                <p><strong>16.000 km:</strong> Tổng chiều dài hệ thống đường Trường Sơn (Đường Hồ Chí Minh) chi viện cho miền Nam.</p>
+                <p><strong>55 ngày đêm:</strong> Thời gian diễn ra cuộc Tổng tiến công và nổi dậy mùa Xuân 1975.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Phần chân trang -->
+    <footer>
+        <p><strong>Trang thông tin Lịch sử Việt Nam - Kháng chiến chống Mỹ</strong></p>
+        <p>Sản phẩm thực hành môn Tin học lớp 12 | Thiết kế chuẩn HTML5 & CSS3</p>
+    </footer>
+
+    <!-- Đoạn mã JavaScript nhỏ giúp biểu mẫu hoạt động thực tế khi nhấn nút -->
+    <script>
+        function xuLyGuiBai(event) {
+            event.preventDefault(); // Ngăn trang web tải lại
+            const name = document.getElementById('fullname').value;
+            alert('Cảm ơn bạn ' + name + '! Cảm nhận lịch sử của bạn đã được ghi nhận thành công.');
+            document.querySelector('form').reset(); // Xóa trắng ô nhập sau khi gửi
+        }
+    </script>
+
+</body>
+</html>
